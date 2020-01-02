@@ -7,7 +7,7 @@ class Post(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField(default = timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    
+
 
     def __str__(self):
-        return f"Title is {self.title} and written by {self.author}"
+        return f"{self.title} By {self.author}"
